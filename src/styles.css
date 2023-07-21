@@ -82,6 +82,7 @@ html {
     font-family: 'Overpass';
 }
 header {
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -90,9 +91,9 @@ header {
     gap: 102px;
     background-image: linear-gradient(to bottom, hsl(13, 100%, 72%), hsl(353, 100%, 62%));
     border-radius: 0px 0px 0px 82px;
+    overflow: hidden;
 }
 .pattern-mobile {
-    display: none;
     position: absolute;
     top: -260px;
     right: -600px;
@@ -155,6 +156,7 @@ main {
     padding: 100px 0px;
 }
 .first__section {
+    position: relative;
     display: flex;
     flex-direction: column;
     gap: 40px;
@@ -197,27 +199,93 @@ main {
     padding: 210px 20px 100px 20px;
     text-align: center;
     background-image: linear-gradient(to bottom, var(--very-dark-gray-blue), var(--very-dark-desaturated-blue));
+    overflow: hidden;
 }
 .phones {
     position: absolute;
     right: 50%;
     transform: translateX(50%);
-    top: -200px;
+    bottom: -186px;
     width: 100%;
+    z-index: 1;
+}
+.circles {
+    position: absolute;
+    top: -148px;
+    right: 50%;
+    transform: translateX(50%);
+    width: 500px;
 }
 .second-section > h2 {
     font-size: 3.4rem;
     font-weight: 700;
     color: var(--white-text);
+    z-index: 1;
 }
 .second-section > p {
     font-size: 1.8rem;
     line-height: 2.8rem;
     font-weight: 300;
     color: var(--grayish-blue-footer-text);
+    z-index: 1;
 }
-.circles {
-    display: none;
+.third-section {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    text-align: center;
+    padding-top: 60px;
+}
+.third-section-div {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 0px 30px;
+}
+.third-section-div > h2 {
+    font-size: 3.4rem;
+    font-weight: 700;
+    color: var(--very-dark-blue-headings);
+}
+.third-section-div > p {
+    font-size: 1.8rem;
+    line-height: 2.8rem;
+    font-weight: 300;
+    color: var(--very-dark-grayish-blue-body-copy);
+}
+footer {
+    display: grid;
+    gap: 40px;
+    width: 100%;
+    place-items: center;
+    text-align: center;
+    padding: 60px 0px;
+    background-color: var(--very-dark-black-blue-footer-background);
+    border-radius: 0px 82px 0px 0px;
+}
+footer > img {
+    padding-bottom: 20px;
+}
+.footer-list > h3 {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: var(--white-text);
+    padding-bottom: 20px;
+}
+.footer-list > ul {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    list-style: none;
+}
+.footer-list li > a {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: var(--grayish-blue-footer-text);
+    text-decoration: none;
+}
+.illustration-laptop {
+    width: 100%;
 }
 .desktop {
     display: none;
