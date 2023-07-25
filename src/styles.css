@@ -104,10 +104,14 @@ nav {
     justify-content: space-between;
     align-items: center;
     width: 100%;
+    max-width: 800px;
     z-index: 2;
 }
 .ul-list {
     display: none;
+}
+.hamburger-icon {
+    cursor: pointer;
 }
 .nav-buttons {
     display: none;
@@ -159,6 +163,7 @@ main {
     position: relative;
     display: flex;
     flex-direction: column;
+    align-items: center;
     gap: 40px;
     text-align: center;
     width: 100%;
@@ -171,12 +176,14 @@ main {
 }
 .editor-img {
     width: 100%;
+    max-width: 560px;
 }
 .first-section-div {
     display: flex;
     flex-direction: column;
     gap: 20px;
     padding: 0px 30px;
+    max-width: 600px;
 }
 .first-section-div > h2 {
     font-size: 2.8rem;
@@ -207,6 +214,7 @@ main {
     transform: translateX(50%);
     bottom: -186px;
     width: 100%;
+    max-width: 375px;
     z-index: 1;
 }
 .circles {
@@ -232,6 +240,7 @@ main {
 .third-section {
     display: flex;
     flex-direction: column;
+    align-items: center;
     gap: 40px;
     text-align: center;
     padding-top: 60px;
@@ -286,7 +295,100 @@ footer > img {
 }
 .illustration-laptop {
     width: 100%;
+    max-width: 560px;
 }
 .desktop {
     display: none;
+}
+
+@media(min-width: 820px) {
+    /* header {
+        padding: 52px 120px 166px 120px;
+    } */
+    .left__container {
+        display: flex;
+        align-items: center;
+        gap: 50px;
+    }
+    .ul-list {
+        display: flex;
+        list-style: none;
+        gap: 18px;
+    }
+    .ul-list > li {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        font-size: 1.4rem;
+        color: var(--white-text); 
+        cursor: pointer;
+    }
+    .hamburger-icon {
+        display: none;
+    }
+    .nav-buttons {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+    }
+    .nav-buttons > a {
+        text-decoration: none;
+        font-size: 1.2rem;
+        color: var(--white-text);
+        cursor: pointer;
+    }
+    .nav-buttons .signup__button {
+        display: grid;
+        place-items: center;
+        width: 120px;
+        height: 40px;
+        font-weight: 700;
+        color: var(--light-red-CTA-text);
+        border-radius: 20px;
+        background-color: var(--white-text);
+    }
+    .pattern-desktop {
+        position: absolute;
+        width: 2100px;
+        right: -898px;
+        top: -802px;
+    }
+    h1 {
+        font-size: 4.6rem;
+    }
+}
+@media (min-width: 1220px) {
+    .editor-img-desktop {
+        position: absolute;
+        top: -46px;
+        right: -278px;
+        width: 780px;
+    }
+    .first__section {
+        padding: 0px 120px;
+        padding-bottom: 270px;
+        overflow-x: clip;
+    }
+    .first-section-div {
+        text-align: start;
+        align-self: flex-start;
+    }
+    .phones {
+        position: absolute;
+        left: 114px;
+        transform: none;
+        bottom: -428px;
+        width: 100%;
+        max-width: 446px;
+        z-index: 1;
+    }
+    .second-section {
+        height: 360px;
+    }
+    .desktop {
+        display: block;
+    }
+    .mobile {
+        display: none;
+    }
 }
