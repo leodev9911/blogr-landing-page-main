@@ -238,6 +238,7 @@ main {
     z-index: 1;
 }
 .third-section {
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -250,6 +251,7 @@ main {
     flex-direction: column;
     gap: 20px;
     padding: 0px 30px;
+    max-width: 600px;
 }
 .third-section-div > h2 {
     font-size: 3.4rem;
@@ -400,6 +402,20 @@ footer > img {
         transform: none;
         width: 860px;
         left: -170px;
+    }
+    .third-section {
+        padding: 220px 60px 150px 0px;
+    }
+    .third-section-div {
+        text-align: start;
+        align-self: flex-end;
+    }
+    .illustration-laptop-desktop {
+        display: block;
+        position: absolute;
+        left: -256px;
+        width: 908px;
+        top: 52px;
     }
     .desktop {
         display: block;
