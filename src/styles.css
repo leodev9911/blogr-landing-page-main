@@ -359,7 +359,7 @@ footer > img {
         font-size: 4.6rem;
     }
 }
-@media (min-width: 1220px) {
+@media (min-width: 1300px) {
     .editor-img-desktop {
         position: absolute;
         top: -46px;
@@ -374,6 +374,15 @@ footer > img {
     .first-section-div {
         text-align: start;
         align-self: flex-start;
+    }
+    .first__section > h2 {
+        font-size: 3.4rem;
+    }
+    .first-section-div > h2 {
+        font-size: 3.4rem;
+    }
+    .first-section-div > p {
+        font-size: 1.8rem;
     }
     .phones {
         position: absolute;
@@ -404,7 +413,7 @@ footer > img {
         left: -170px;
     }
     .third-section {
-        padding: 220px 60px 150px 0px;
+        padding: 260px 100px 220px 40px;
     }
     .third-section-div {
         text-align: start;
@@ -416,6 +425,21 @@ footer > img {
         left: -256px;
         width: 908px;
         top: 52px;
+    }
+    footer {
+        display: grid;
+        grid-template-columns: 300px 300px 300px 300px;
+        text-align: start; 
+        padding: 66px 0px 200px 40px;
+        align-items: flex-start;
+        justify-items: start;
+        justify-content: center;
+    }
+    .footer-list > h3 {
+        padding-bottom: 40px;
+    }
+    .footer-list > ul {
+        gap: 14px;
     }
     .desktop {
         display: block;
