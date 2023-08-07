@@ -7,7 +7,7 @@
 
     /* Neutral */
 
-    --white-text: hsl(0, 0%, 100%);
+    --white-text: rgb(255, 255, 255);
     --grayish-blue-footer-text: hsl(240, 2%, 79%);
     --very-dark-grayish-blue-body-copy: hsl(207, 13%, 34%);
     --very-dark-black-blue-footer-background: hsl(240, 10%, 16%);
@@ -149,10 +149,20 @@ h1 {
     color: white;
     border-radius: 20px;
     border: 1px solid white;
+    transition: 0.5s;
+}
+.presentation-buttons > a:hover {
+    color: var(--light-red-CTA-text);
+    background-color: white;
 }
 .presentation-buttons > a:nth-child(1) {
     background-color: white;
     color: var(--light-red-CTA-text);
+    border: none;
+}
+.presentation-buttons > a:nth-child(1):hover {
+    color: var(--white-text);
+    background-color: rgb(255, 255, 255, 0.2);
 }
 main {
     
@@ -295,6 +305,9 @@ footer > img {
     color: var(--grayish-blue-footer-text);
     text-decoration: none;
 }
+.footer-list li > a:hover {
+    border-bottom: 1px solid white;
+}
 .illustration-laptop {
     width: 100%;
     max-width: 560px;
@@ -322,8 +335,12 @@ footer > img {
         align-items: center;
         gap: 8px;
         font-size: 1.4rem;
-        color: var(--white-text); 
+        color: hsl(240deg 4.02% 87.69%);; 
         cursor: pointer;
+    }
+    .ul-list > li:hover p {
+        color: var(--white-text); 
+        border-bottom: 1px solid var(--white-text);
     }
     .hamburger-icon {
         display: none;
@@ -348,6 +365,11 @@ footer > img {
         color: var(--light-red-CTA-text);
         border-radius: 20px;
         background-color: var(--white-text);
+        transition: 0.5s;
+    }
+    .nav-buttons .signup__button:hover {
+        color: var(--white-text);
+        background-color: rgb(255, 255, 255, 0.2);
     }
     .pattern-desktop {
         position: absolute;
