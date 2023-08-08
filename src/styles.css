@@ -16,7 +16,7 @@
 
     /* Background gradient - Intro/CTA mobile nav: */
 
-    --very-light-red: hsl(13, 100%, 72%);
+    --very-light-red: #ff8f70;
     --light-red: hsl(353, 100%, 62%);
 
     /* Background gradient - body: */
@@ -113,6 +113,87 @@ nav {
 .hamburger-icon {
     cursor: pointer;
 }
+.mobile-menu {
+    position: fixed;
+    right: 18px;
+    top: 124px;
+    width: 338px;
+    padding: 32px;
+    border-radius: 6px;
+    height: auto;
+    box-shadow: 2px 10px 29px -9px rgba(0,0,0,0.45);
+    background-color: white;
+    z-index: 10;
+}
+.lists {
+    width: 100%;
+    border-bottom: 1px solid gray;
+    padding-bottom: 20px;
+}
+.sections {
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    list-style: none;
+}
+.sections > li {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: var(--very-dark-blue-headings);
+    cursor: pointer;
+}
+.sections > li img {
+    filter: invert(79%) sepia(73%) saturate(3054%) hue-rotate(313deg) brightness(102%) contrast(102%);
+}
+.contacts {
+    display: flex;
+    padding: 20px 0px;
+    gap: 14px;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    border-radius: 6px;
+    list-style: none;
+    background-color: #ecebeb;
+}
+.contacts > li {
+    font-weight: 700;
+    font-size: 1.4rem;
+    color: var(--very-dark-blue-headings);
+}
+.buttons {
+    display: grid;
+    gap: 16px;
+    place-items: center;
+    padding-top: 30px;
+}
+.buttons > a {
+    text-decoration: none;
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: white;
+    cursor: pointer;
+}
+.buttons > a:nth-child(1) {
+    font-size: 1.6rem;
+    color: var(--very-dark-blue-headings);
+}
+.signup__button {
+    display: grid;
+    place-items: center;
+    width: 120px;
+    height: 40px;
+    font-weight: 700;
+    color: white;
+    border-radius: 20px;
+    background-image: linear-gradient(to right, hsl(13, 100%, 72%), hsl(353, 100%, 62%));
+    transition: 0.5s;
+}
 .nav-buttons {
     display: none;
 }
@@ -120,7 +201,7 @@ nav {
     display: grid;
     gap: 10px;
     text-align: center;
-    z-index: 3;
+    z-index: 1;
 }
 h1 {
     font-size: 3.8rem;
@@ -315,6 +396,9 @@ footer > img {
 .desktop {
     display: none;
 }
+.inactive {
+    display: none;
+}
 
 @media(min-width: 820px) {
     /* header {
@@ -353,19 +437,15 @@ footer > img {
     .nav-buttons > a {
         text-decoration: none;
         font-size: 1.2rem;
-        color: var(--white-text);
         cursor: pointer;
     }
-    .nav-buttons .signup__button {
-        display: grid;
-        place-items: center;
-        width: 120px;
-        height: 40px;
-        font-weight: 700;
+    .nav-buttons > a:nth-child(1) {
+     color: white;
+    }
+    .signup__button {
         color: var(--light-red-CTA-text);
-        border-radius: 20px;
+        background-image: none;
         background-color: var(--white-text);
-        transition: 0.5s;
     }
     .nav-buttons .signup__button:hover {
         color: var(--white-text);
