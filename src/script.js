@@ -3,7 +3,7 @@ const contactToggleDesk = document.querySelector('.contacts-desktop');
 const hambIcon = document.querySelector('.hamburger-icon');
 const mobileMenu = document.querySelector('.mobile-menu');
 const contactsToggleMobile = document.querySelector('.contacts');
-const connectMobile = document.querySelector('.mobile-li');
+const connectMobile = document.querySelector('.li-connect__mobile');
 
 connectButton.addEventListener('click', contactDesk);
 hambIcon.addEventListener('click', menuToggle);
@@ -16,6 +16,5 @@ function menuToggle () {
     mobileMenu.classList.toggle('inactive');
 }
 function connectButtonMobile () {
-    console.log('s');
     contactsToggleMobile.classList.toggle('inactive');
 }
