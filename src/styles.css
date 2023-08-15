@@ -81,6 +81,9 @@ html {
     font-size: 62.5%;
     font-family: 'Overpass';
 }
+.attribution {
+    text-align: center;
+}
 header {
     position: relative;
     display: flex;
